@@ -14,7 +14,7 @@ namespace WcfSPubs.Datos
     {
         string Conexion = ConfigurationManager.ConnectionStrings["ConexionPubs"].ConnectionString;
 
-        public List<DetalleUsuario> ValidaUsuario(string Usuario, string Contrasena, bool ValidaAdmin)
+        public List<DetalleUsuario> ValidaUsuario(string Usuario, string Contrasena)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace WcfSPubs.Datos
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@Ususario", Usuario);
                     command.Parameters.AddWithValue("@Pass", Contrasena);
-                    command.Parameters.AddWithValue("@count", ValidaAdmin);
+
                     using (IDataReader dr = command.ExecuteReader())
                     {
                         List<DetalleUsuario> lista = new List<DetalleUsuario>();

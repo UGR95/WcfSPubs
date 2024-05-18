@@ -15,11 +15,11 @@ namespace WcfSPubs
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IServicePubs
     {
-        public List<DetalleUsuario> ValidaUsuario (string Usuario, string Contrasena, bool ValidaAdmin)
+        public List<DetalleUsuario> ValidaUsuario (string Usuario, string Contrasena)
         {
             DatosPubs datos = new DatosPubs();
 
-            return datos.ValidaUsuario(Usuario, Contrasena, ValidaAdmin);
+            return datos.ValidaUsuario(Usuario, Contrasena);
         }
     }
 }

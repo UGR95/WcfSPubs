@@ -16,7 +16,7 @@ namespace WcfSPubs
     {
 
         [OperationContract]
-        List<DetalleUsuario> ValidaUsuario(string Usuario, string Contrasena, bool ValidaAdmin);
+        List<DetalleUsuario> ValidaUsuario(string Usuario, string Contrasena);
         
     }
 }

@@ -16,5 +16,7 @@ namespace WcfSPubs.Fachada
             get { return _NombreUsuario; }
             set { _NombreUsuario = value; }
         }
+
+        public string Error { get; set; }
     }
 }

@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="Datos\DatosPubs.cs" />
     <Compile Include="Fachada\DetalleUsuario.cs" />
+    <Compile Include="Fachada\DetalleVistaAutores.cs" />
     <Compile Include="ServicePubs.svc.cs">
       <DependentUpon>ServicePubs.svc</DependentUpon>
     </Compile>

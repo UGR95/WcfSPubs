@@ -17,6 +17,8 @@ namespace WcfSPubs
 
         [OperationContract]
         List<DetalleUsuario> ValidaUsuario(string Usuario, string Contrasena);
+        [OperationContract]
+        List<DetalleVistaAutores> ObtenerAutores();
         
     }
 }

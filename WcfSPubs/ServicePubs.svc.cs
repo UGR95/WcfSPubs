@@ -21,5 +21,11 @@ namespace WcfSPubs
 
             return datos.ValidaUsuario(Usuario, Contrasena);
         }
+
+        public List<DetalleVistaAutores> ObtenerAutores()
+        {
+            DatosPubs datos = new DatosPubs();
+            return datos.VistaAutores();
+        }
     }
 }

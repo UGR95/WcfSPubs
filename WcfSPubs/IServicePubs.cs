@@ -17,8 +17,11 @@ namespace WcfSPubs
 
         [OperationContract]
         List<DetalleUsuario> ValidaUsuario(string Usuario, string Contrasena);
+
         [OperationContract]
         List<DetalleVistaAutores> ObtenerAutores();
-        
+
+        [OperationContract]
+        string InsertarAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
     }
 }

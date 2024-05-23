@@ -125,5 +125,39 @@ namespace WcfSPubs.Datos
                 throw;
             }
         }
+
+        public string AuctualizarAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(Conexion))
+                {
+                    con.Open();
+
+                    SqlCommand command = new SqlCommand("spu_ActualizarAutor", con);
+
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@IdRegistro", IdAutor );
+                    command.Parameters.AddWithValue("@Nombre", Nombre );
+                    command.Parameters.AddWithValue("@apellido", Apellido);
+                    command.Parameters.AddWithValue("@Telefono", Telefono);
+                    command.Parameters.AddWithValue("@Direccion", Direccion );
+                    command.Parameters.AddWithValue("@Ciudad", Ciudad );
+                    command.Parameters.AddWithValue("@Estado", Estado );
+                    command.Parameters.AddWithValue("@CodigoPostal", CodPostal );
+                    command.Parameters.AddWithValue("@Contrato", Contrato );
+
+                    command.ExecuteScalar();
+
+                    return "1";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+                throw;
+            }
+        }
     }
 }

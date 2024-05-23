@@ -33,5 +33,11 @@ namespace WcfSPubs
             DatosPubs datos = new DatosPubs();
             return datos.InsertarAutor(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
         }
+
+        public string ActualizaAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato)
+        {
+            DatosPubs datos = new DatosPubs();
+           return datos.AuctualizarAutor(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
+        }
     }
 }

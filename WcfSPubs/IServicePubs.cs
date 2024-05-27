@@ -23,7 +23,11 @@ namespace WcfSPubs
 
         [OperationContract]
         string InsertarAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
+
         [OperationContract]
         string ActualizaAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
+
+        [OperationContract]
+        List<DetalleTitulos> ObtenerTitluos();
     }
 }

@@ -39,5 +39,12 @@ namespace WcfSPubs
             DatosPubs datos = new DatosPubs();
            return datos.AuctualizarAutor(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
         }
+
+        public List<DetalleTitulos> ObtenerTitluos()
+        {
+            DatosPubsTitulo pubsTitulo = new DatosPubsTitulo();
+            return pubsTitulo.ObtenerTitulos();
+        }
     }
+
 }
